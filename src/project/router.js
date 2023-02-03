@@ -72,6 +72,11 @@ let project = {
 
       ],
     },
+    {
+      name:'home',
+      path:'/old',
+      component: ()=> import('./pages/old/index.vue')
+    }
   ],
 };
 export default project
