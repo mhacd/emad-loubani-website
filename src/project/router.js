@@ -1,15 +1,19 @@
+import adminRoutes from './pages/admin/router'
+import websiteRoutes from './pages/website/router'
+
 let project = {
   name: "project",
   path: "",
   component: () => import("./module-layout.vue"),
   children: [
+
     {
       name: "",
       path: "/",
       component: () => import("./layouts/layout/default-layout.vue"),
       children: [
         {
-          path: "",
+          path: "vue",
           component: () => import("./pages/vue/vue-page.vue"),
           children: [
             {
@@ -52,23 +56,8 @@ let project = {
             },
           ]
         },
-        {
-          path: "admin",
-          component: () => import("./pages/admin/admin-module.vue"),
-          children: [
-            {
-              path: "",
-              component: () => import("./pages/admin/pages/users.vue"),
-              children: [
-              ]
-            },
-            {
-              path: "add-bill/:user",
-              component: () => import("./pages/admin/pages/add-bill.vue"),
-
-            },
-          ]
-        },
+        adminRoutes,
+        websiteRoutes,
 
       ],
     },
