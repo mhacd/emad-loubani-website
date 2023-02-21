@@ -8,8 +8,12 @@
           </div>
           <div class="px-0 py-0">
             <v-tabs>
-              <v-tab :to="'/'">home</v-tab>
-              <v-tab :to="'/bill'">Check Bill</v-tab>
+              <v-tab
+                v-for="(tab, index) in tabs"
+                :to="tab.route"
+                :key="index"
+                >{{ tab.name }}</v-tab
+              >
               <v-divider v-if="getAdmin" vertical class="mx-3"></v-divider>
               <v-tab v-if="getAdmin" :to="'/admin'">Customers List</v-tab>
             </v-tabs>
@@ -52,6 +56,14 @@ export default {
   data() {
     return {
       mtnLogo,
+      tabs: [
+        { name: "vue", route: "/vue" },
+        { name: "Emad profile", route: "/" },
+        { name: "Jobs", route: "/jobs" },
+        { name: "Apply ", route: "/apply/id" },
+        { name: "admin dashboard", route: "/admin/dashboard" },
+        { name: "admin open position", route: "/admin/open-position" },
+      ],
     };
   },
   computed: {
