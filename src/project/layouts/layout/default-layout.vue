@@ -15,12 +15,12 @@
                 >{{ tab.name }}</v-tab
               >
               <v-divider v-if="getAdmin" vertical class="mx-3"></v-divider>
-              <v-tab v-if="getAdmin" :to="'/admin'">Customers List</v-tab>
+              <v-tab v-if="getAdmin" :to="'/vue/admin'">Customers List</v-tab>
             </v-tabs>
           </div>
           <div class="ms-auto">
             <div class="px-3">
-              <v-btn to="/register" class="me-3" depressed color="primary">
+              <v-btn to="/vue/register" class="me-3" depressed color="primary">
                 Register Customer
               </v-btn>
 
@@ -34,7 +34,7 @@
                 color="grey"
                 >admin logout <v-icon class="ms-2">mdi-logout</v-icon>
               </v-btn>
-              <v-btn v-else to="/login" outlined color="primary"
+              <v-btn v-else to="/vue/login" outlined color="primary"
                 >admin login
               </v-btn>
             </div>
