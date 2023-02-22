@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -34,8 +35,8 @@ export default {
       phoneNumber: "",
     };
   },
-  methods{
-     async updateAmount() {
+  methods: {
+    async updateAmount() {
       try {
         this.amountLoading = true;
         let amount = this.amount;
@@ -58,7 +59,7 @@ export default {
         console.log(err);
       }
     },
-  }
+  },
 };
 </script>
 
