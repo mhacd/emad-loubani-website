@@ -1,10 +1,6 @@
 <template>
   <div>
-    <v-container fluid>
-      <v-row>
-        <v-col>
-            <v-sheet max-width="700" class="mx-auto">
-                <v-form ref="form" v-model="valid">
+    <v-form ref="form" v-model="valid">
                   <v-card>
                     <v-card-text>
                       <v-row dense>
@@ -153,10 +149,7 @@
                     </v-card-text>
                   </v-card>
                 </v-form>
-            </v-sheet>
-        </v-col>
-      </v-row>
-    </v-container>
+
   </div>
 </template>
 
