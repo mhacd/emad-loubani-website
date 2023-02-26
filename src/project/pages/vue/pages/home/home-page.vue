@@ -6,6 +6,7 @@
     <m-apply-form></m-apply-form>
     <m-open-position-form></m-open-position-form>
     <m-b-list-input></m-b-list-input>
+    <m-apply-tabs></m-apply-tabs>
     <m-footer> </m-footer>
   </div>
 </template>
@@ -18,6 +19,7 @@ import mFooter from "./components/footer.vue";
 import mApplyForm from './components/apply-form.vue'
 import mOpenPositionForm from './components/open-position-form.vue'
 import mBListInput from './components/b-list-input.vue'
+import applyTabs from './components/tabs'
 export default {
   components: {
     "m-hero": mHero,
@@ -26,6 +28,7 @@ export default {
     "m-apply-form": mApplyForm,
     "m-open-position-form": mOpenPositionForm,
     "m-b-list-input": mBListInput,
+    "m-apply-tabs": applyTabs,
     "m-footer": mFooter,
   },
   data() {
